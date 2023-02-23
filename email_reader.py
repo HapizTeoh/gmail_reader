@@ -121,7 +121,7 @@ def read_message(service, message,db):
 
     
 if __name__ == "__main__":
-    databases = ["payments-db-production","fave-production-main-v1","maps-cache-db-production"]
+    databases = ["key"]
     for db in databases:
         # get emails that match the query you specify
         results = search_messages(service, f"RDS Notification Message,Event Source : db-snapshot,SourceId: rds:{db},after:2022/04/01")
